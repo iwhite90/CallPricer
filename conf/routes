@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+
+GET     /addCall/:custId/:callType/:length  controllers.CallPriceController.addCall(custId: Int, callType: String, length: Double)
+GET     /costHistory/:custId        controllers.CallPriceController.getCostHistory(custId: Int)
+GET     /totalCost/:custId          controllers.CallPriceController.getTotalCost(custId: Int)
+GET     /prizeDraw/:custId          controllers.CallPriceController.prizeDraw(custId: Int)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
