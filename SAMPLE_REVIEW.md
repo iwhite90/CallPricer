@@ -1,4 +1,4 @@
-CallPricer issues
+## CallPricer issues
 
 - There is a logic bug due to rounding errors. The sum of all the costs in a cost history may not add up to the total cost.
 - The application isn't comprehensively tested. There should be tests for edge cases which would have picked up the logic bug.
@@ -26,7 +26,7 @@ CallPricer issues
 - General untidiness, such as leaving the auto-generated comments in the ApplicationSpec class, unused jodatime import, etc.
 
 
-To solve some of these issues, you could:
+## To solve some of these issues, you could:
 
 - Create a repository class to manage application state, and inject it where needed.
 - Create a service layer to handle business logic, and inject it into the controller.
@@ -35,5 +35,5 @@ To solve some of these issues, you could:
 - General refactoring to improve code quality and more idiomatic use of Scala.
 
 
-If you could only fix one thing...
+## If you could only fix one thing...
 - The logic bug due to rounding errors, as it will cause confusion and complaints from customers.
